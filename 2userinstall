@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Установка КонсультантПлюс"
+if [ "$(whoami)" != 'root' ]; then
+WINEARCH=win32 winecfg
+mkdir /home/`whoami`/.wine/drive_c/ConsUserData
+mkdir /home/`whoami`/.wine/drive_c/ConsRegionUserData
+cp ./files/cons.ico /home/`whoami`/.wine/
+cp ./files/ConsultantPlus.desktop /home/`whoami`/"Рабочий стол"
+cp ./files/"ConsultantPlus Region.desktop" /home/`whoami`/"Рабочий стол"
+cp ./files/run_cons.sh /home/`whoami`/.wine/
+chmod +x /home/`whoami`/.wine/run_cons.sh
+cp ./files/run_consr.sh /home/`whoami`/.wine/
+chmod +x /home/`whoami`/.wine/run_consr.sh
+sed -i -e "s/user/`whoami`/g" /home/`whoami`/.wine/run_cons.sh
+sed -i -e "s/user/`whoami`/g" /home/`whoami`/.wine/run_consr.sh
+sed -i -e "s/user/`whoami`/g" /home/`whoami`/"Рабочий стол"/ConsultantPlus.desktop
+sed -i -e "s/user/`whoami`/g" /home/`whoami`/"Рабочий стол"/"ConsultantPlus Region.desktop"
+echo "Готово!"
+
+else
+echo "Запускать под обычным пользователем"
+fi

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ConsultantPlus Region
+Exec=/home/user/.wine/run_consr.sh
+Type=Application
+StartupNotify=true
+Comment=ConsultantPlus Region
+Path=/home/user/.wine/dosdevices/c:/ConsRegionUserData
+Icon=/home/user/.wine/cons.ico

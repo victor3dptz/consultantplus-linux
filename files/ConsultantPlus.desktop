@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ConsultantPlus
+Exec=/home/user/.wine/run_cons.sh
+Type=Application
+StartupNotify=true
+Comment=ConsultantPlus
+Path=/home/user/.wine/dosdevices/c:/ConsUserData
+Icon=/home/user/.wine/cons.ico

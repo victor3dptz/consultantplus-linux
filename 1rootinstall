@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "Установка КонсультантПлюс"
+if [ -f /usr/bin/conslin ]; then
+echo "Уже установлен..."
+exit 1;
+fi
+if [ "$(whoami)" != 'root' ]; then
+echo "Нужны права root"
+exit 1;
+else
+# Установка
+read -p "Press any key to install..."
+yum -y install wine
+cp ./files/conslin /usr/bin
+chmod a+x /usr/bin/conslin
+echo -e "\n/usr/bin/conslin" >> /etc/rc.d/rc.local
+cp ./files/cons /etc
+chown root:root /etc/cons
+chmod 444 /etc/cons
+mkdir /mnt/consultantplus
+mkdir /mnt/consplusregion
+chmod 4755 /sbin/mount.cifs
+echo -e "\n//10.4.11.231/Cons	/mnt/consultantplus	cifs	credentials=/etc/cons,iocharset=utf8,file_mode=0777,dir_mode=0777,noperm,nocase,forcemand,users,noauto,rw	0 0" >> /etc/fstab
+echo -e "\n//10.4.11.231/ConsR	/mnt/consplusregion	cifs	credentials=/etc/cons,iocharset=utf8,file_mode=0777,dir_mode=0777,noperm,nocase,forcemand,users,noauto,rw	0 0" >> /etc/fstab
+read -p "Press any key to reboot..."
+shutdown -r now
+fi
