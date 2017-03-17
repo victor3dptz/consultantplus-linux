@@ -6,7 +6,7 @@ Then, edit file "files/cons" and supply your username, password and domain for c
 
 Installation is done in 2 steps:
 1) Log in as root and run ./1rootinstall.sh, then reboot.
-2) Log in as user and run ./1userinstall.sh.
+2) Log in as user and run ./2userinstall.sh.
 
 Shortcuts should appear on the desktop and if everything is ok user will be able to run ConsultantPlus in Linux.
 
