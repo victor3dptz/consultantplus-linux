@@ -10,4 +10,7 @@ Installation is done in 2 steps:
 
 Shortcuts should appear on the desktop and if everything is ok user will be able to run ConsultantPlus in Linux.
 
+
 Tested on CentOS 6.8 (x86)
+
+
