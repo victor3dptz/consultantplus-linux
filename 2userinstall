@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#cd /opt/consultant
 echo "Установка КонсультантПлюс"
 if [ "$(whoami)" != 'root' ]; then
 WINEARCH=win32 winecfg
