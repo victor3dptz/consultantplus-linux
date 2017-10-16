@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ConsultantPlus
+Exec=/usr/local/bin/run_cons.sh
+Type=Application
+Categories=Office
+StartupNotify=true
+Comment=ConsultantPlus
+Icon=/usr/share/icons/cons.ico

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ConsultantPlus Region
+Exec=/usr/local/bin/run_consr.sh
+Type=Application
+Categories=Office
+StartupNotify=true
+Comment=ConsultantPlus Region
+Icon=/usr/share/icons/cons.ico
