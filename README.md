@@ -13,4 +13,4 @@ Shortcuts should appear on the desktop and if everything is ok user will be able
 
 Tested on CentOS 6.8 (x86)
 
-
+You may also build the RPM using the SPEC file provided.
